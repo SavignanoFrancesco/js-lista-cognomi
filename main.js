@@ -37,17 +37,17 @@ var counter = 0;
 for (var i = 0; i < surname_list.length; i++) {
     if(surname == surname_list[i]){
         counter += 1;
-        position = i;
+        last_position = i;
     }
 }
 
 //calcola la prima posizione in cui si trova il cognome
-var first_position = position - (counter - 1);
+var first_position = last_position - (counter - 1);
 //stampa della ricerca
 if (counter > 1) {
     console.log(surname,'è presente',counter,'volte.');
     console.log('Il primo', surname,'si trova in posizione', first_position);
-    console.log('L\'ultimo',surname,'si trova in posizione',position);
+    console.log('L\'ultimo',surname,'si trova in posizione',last_position);
 }else{
-    console.log(surname,'si trova in posizione',position);
+    console.log(surname,'si trova in posizione',last_position);
 }
