@@ -33,7 +33,7 @@ for(var i = 0; i < surname_list.length; i++){
 //soluzione con cicolo for(trova l'ultima posizione del cognome se è gia presente un cognome uguale in lista)
 var last_position = 0;
 var counter = 0;
-//trova l'ultima posizione e quante volte è presente nella lista
+//ricerca l'ultima posizione e quante volte è presente nella lista
 for (var i = 0; i < surname_list.length; i++) {
     if(surname == surname_list[i]){
         counter += 1;
@@ -41,8 +41,9 @@ for (var i = 0; i < surname_list.length; i++) {
     }
 }
 
-//calcola
+//calcola la prima posizione in cui si trova il cognome
 var first_position = position - (counter - 1);
+//stampa della ricerca
 if (counter > 1) {
     console.log(surname,'è presente',counter,'volte.');
     console.log('Il primo', surname,'si trova in posizione', first_position);
