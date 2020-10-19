@@ -9,7 +9,7 @@ var surname_list = ['rossi','ferrari','russo','bianchi','romano','gallo','costa'
 var surname = prompt('Inserisci il tuo cognome');
 
 
-//Inserimento del cognome utente nella lista e tampa della lista disordinata
+//Inserimento del cognome utente nella lista e stampa della lista disordinata
 surname_list.push(surname);
 console.log('Lista disordinata:');
 for(var i = 0; i < surname_list.length; i++){
@@ -24,8 +24,6 @@ console.log('Lista ordinata:');
 for(var i = 0; i < surname_list.length; i++){
     console.log(i, surname_list[i]);
 }
-
-//stampa la posizione del cognome dell'utente dopo aver ordinato l'array
 
 //(soluzione con metodo indexOf())
 // console.log('Posizione di', cognome, 'nell\'array: ', surname_list.indexOf(cognome));
@@ -43,7 +41,7 @@ for (var i = 0; i < surname_list.length; i++) {
 
 //calcola la prima posizione in cui si trova il cognome
 var first_position = last_position - (counter - 1);
-//stampa della ricerca
+//stampa della quante volte è presente, prima posizione e ultima posizione
 if (counter > 1) {
     console.log(surname,'è presente',counter,'volte.');
     console.log('Il primo', surname,'si trova in posizione', first_position);
