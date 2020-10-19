@@ -8,7 +8,7 @@ var lista_cognomi = ['rossi','ferrari','russo','bianchi','romano','gallo','costa
 //Richiesta all'utente di inserire il proprio cognome
 var cognome = prompt('Inserisci il tuo cognome');
 
-//Inserimento del cognome utente nella lista
+//Inserimento del cognome utente nella lista e tampa della lista disordinata
 lista_cognomi.push(cognome);
 console.log('Lista disordinata:');
 for(var i = 0; i < lista_cognomi.length; i++){
@@ -18,6 +18,7 @@ for(var i = 0; i < lista_cognomi.length; i++){
 //ordinamento alfabetico
 lista_cognomi.sort();
 
+//stampa della lista ordinata
 console.log('Lista ordinata:');
 for(var i = 0; i < lista_cognomi.length; i++){
     console.log(i, lista_cognomi[i]);
