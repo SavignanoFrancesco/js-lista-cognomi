@@ -31,11 +31,22 @@ for(var i = 0; i < surname_list.length; i++){
 // console.log('Posizione di', cognome, 'nell\'array: ', surname_list.indexOf(cognome));
 
 //soluzione con cicolo for(trova l'ultima posizione del cognome se è gia presente un cognome uguale in lista)
-var position = 0;
+var last_position = 0;
+var counter = 0;
+//trova l'ultima posizione e quante volte è presente nella lista
 for (var i = 0; i < surname_list.length; i++) {
     if(surname == surname_list[i]){
+        counter += 1;
         position = i;
     }
 }
 
-console.log(surname,'si trova in posizione',position);
+//calcola
+var first_position = position - (counter - 1);
+if (counter > 1) {
+    console.log(surname,'è presente',counter,'volte.');
+    console.log('Il primo', surname,'si trova in posizione', first_position);
+    console.log('L\'ultimo',surname,'si trova in posizione',position);
+}else{
+    console.log(surname,'si trova in posizione',position);
+}
